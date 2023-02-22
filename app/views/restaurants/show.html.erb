@@ -1,0 +1,16 @@
+<h1><%= @restaurant.name %></h1>
+<p>Infos :</p>
+<ul>
+<li>Address : <%= @restaurant.address %></li>
+<li>Phone : <%= @restaurant.phone_number %></li>
+<li>Category : <%= @restaurant.category %></li>
+</ul>
+
+<p>All reviews</p>
+<ul>
+<% @restaurant.reviews.each do |review| %>
+  <li><%= "Content: #{review.content} - Rating: #{review.rating}" %></li>
+<% end %>
+</ul>
+<h1>Add a new review</h1>
+<%= render "reviews/form", review: @review %>
