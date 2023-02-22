@@ -10,7 +10,7 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    # Pourquoi ???
+    # Pourquoi ???dd
     @review = Review.new
   end
 
